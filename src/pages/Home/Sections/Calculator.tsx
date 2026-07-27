@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function SavingsCalculator() {
   const [pincode, setPincode] = useState("");
@@ -22,8 +23,8 @@ function SavingsCalculator() {
           </h2>
 
           <p className="mt-8 max-w-lg text-2xl leading-10 text-gray-700">
-            Enter your pincode and average monthly electricity bill to
-            calculate your savings.
+            Enter your pincode and average monthly electricity bill to calculate
+            your savings.
           </p>
         </div>
 
@@ -42,9 +43,7 @@ function SavingsCalculator() {
               Monthly Electricity Bill
             </span>
 
-            <span className="text-xl font-bold">
-              ₹{bill}
-            </span>
+            <span className="text-xl font-bold">₹{bill}</span>
           </div>
 
           <input
@@ -57,9 +56,11 @@ function SavingsCalculator() {
             className="h-3 w-full cursor-pointer accent-green-400"
           />
 
-          <button className="mt-12 w-full rounded-xl bg-gradient-to-r from-indigo-600 to-gray-700 py-5 text-xl font-semibold text-white transition hover:opacity-90">
-            Calculate Now →
-          </button>
+          <Link to={"/calculator"}>
+            <button className="mt-12 w-full rounded-xl bg-linear-to-r from-indigo-600 to-gray-700 py-5 text-xl font-semibold text-white transition hover:opacity-90">
+              Calculate Now →
+            </button>
+          </Link>
         </div>
       </div>
     </section>
