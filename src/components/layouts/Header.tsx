@@ -59,16 +59,20 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur-md">
-      <Container className="flex h-18 items-center justify-between py-4">
+      <Container className="flex h-22 items-center justify-between py-4">
         {/* Logo */}
         <Link
           to="/"
           className="text-xl font-bold tracking-tight text-gray-900"
           onClick={() => setIsOpen(false)}
         >
-          GK <span className="text-blue-600">India</span>
+          <img
+            src="public\resized-logo.webp"
+            alt="GK India Solar Tech"
+            width={"80px"}
+            height={"80px"}
+          />
         </Link>
-
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
           <ul className="flex items-center gap-10">

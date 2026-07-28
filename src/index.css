@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 
 @import "tailwindcss";
 
@@ -6,15 +6,25 @@
   --font-sans: "Inter", "Plus Jakarta Sans", system-ui, sans-serif;
   --font-display: "Space Grotesk", sans-serif;
 
-  --color-sky: #EAF3FB;
-  --color-mist: #F3F7FB;
-  --color-navy: #0F2540;
-  --color-amber: #F5A524;
-  --color-amber-dark: #D9860E;
-  --color-ember: #E8622C;
-  --color-leaf: #2F9E6E;
+  /* Backgrounds */
+  --color-sky: #fbfbfb;
+  --color-mist: #f7f9fc;
 
-  --shadow-sun: 0 20px 45px -20px rgba(15, 37, 64, 0.18);
+  /* Brand Colors */
+  --color-navy: #052255;
+  --color-navy-dark: #04102e;
+
+  --color-amber: #fc9d04;
+  --color-amber-dark: #f06605;
+
+  --color-leaf: #539704;
+
+  /* Optional Accent */
+  --color-light-blue: #e8f2ff;
+  --color-light-orange: #fff3dd;
+  --color-light-green: #eef8e5;
+
+  --shadow-sun: 0 20px 45px -20px rgba(5, 34, 85, 0.22);
 }
 /* :root {
   --text: #6b6375;

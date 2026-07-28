@@ -39,8 +39,8 @@ export const PageHeader = () => {
     <div className="relative overflow-hidden bg-slate-900 py-16 text-white md:py-24">
       {/* Background Decor - Radial gradients for modern premium look */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute -top-[40%] -left-[10%] h-[150%] w-[60%] rounded-full bg-blue-600/25 blur-[120px]" />
-        <div className="absolute -bottom-[40%] -right-[10%] h-[150%] w-[60%] rounded-full bg-emerald-600/15 blur-[120px]" />
+        <div className="absolute top-[-40%] left-[-10%] h-[150%] w-[60%] rounded-full bg-blue-600/25 blur-[120px]" />
+        <div className="absolute bottom-[40%] right-[10%] h-[150%] w-[60%] rounded-full bg-emerald-600/15 blur-[120px]" />
         
         {/* Optional background image overlay */}
         {config.image && (
@@ -56,7 +56,7 @@ export const PageHeader = () => {
         )}
         
         {/* Dark theme overlay mask */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-slate-900/40 to-slate-950/60" />
+        <div className="absolute inset-0 bg-linear-to-b from-slate-950/20 via-slate-900/40 to-slate-950/60" />
       </div>
 
       <Container className="relative z-10">
