@@ -35,17 +35,41 @@ const Header = () => {
     <>
       <header className="bg-white/80 backdrop-blur-md border-b border-gray-100">
         <Container className="flex h-14 items-center justify-between">
-          <Link to="/" className="flex items-center gap-3" onClick={() => setIsOpen(false)}>
-            <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" className="p-2 bg-primary-light rounded-full text-primary hover:bg-primary hover:text-white transition-colors">
+          <Link
+            to="/"
+            className="flex items-center gap-3"
+            onClick={() => setIsOpen(false)}
+          >
+            <a
+              href="https://facebook.com/yourpage"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-primary-light rounded-full text-primary hover:bg-primary hover:text-white transition-colors"
+            >
               <FaFacebookF size={12} />
             </a>
-            <a href="https://instagram.com/yourpage" target="_blank" rel="noopener noreferrer" className="p-2 bg-primary-light rounded-full text-primary hover:bg-primary hover:text-white transition-colors">
+            <a
+              href="https://instagram.com/yourpage"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-primary-light rounded-full text-primary hover:bg-primary hover:text-white transition-colors"
+            >
               <FaInstagram size={12} />
             </a>
-            <a href="https://linkedin.com/company/yourpage" target="_blank" rel="noopener noreferrer" className="p-2 bg-primary-light rounded-full text-primary hover:bg-primary hover:text-white transition-colors">
+            <a
+              href="https://linkedin.com/company/yourpage"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-primary-light rounded-full text-primary hover:bg-primary hover:text-white transition-colors"
+            >
               <FaLinkedinIn size={12} />
             </a>
-            <a href="https://twitter.com/yourpage" target="_blank" rel="noopener noreferrer" className="p-2 bg-primary-light rounded-full text-primary hover:bg-primary hover:text-white transition-colors">
+            <a
+              href="https://twitter.com/yourpage"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 bg-primary-light rounded-full text-primary hover:bg-primary hover:text-white transition-colors"
+            >
               <FaTwitter size={12} />
             </a>
           </Link>
@@ -69,7 +93,11 @@ const Header = () => {
 
       <header className="bg-primary sticky top-0 z-50">
         <Container className="flex h-22 items-center justify-between bg-primary">
-          <Link to="/" className="text-xl font-bold tracking-tight text-white" onClick={() => setIsOpen(false)}>
+          <Link
+            to="/"
+            className="text-xl font-bold tracking-tight text-white"
+            onClick={() => setIsOpen(false)}
+          >
             <h2 className="font-extrabold text-white text-4xl">LOGO</h2>
           </Link>
 
@@ -95,7 +123,11 @@ const Header = () => {
           </Link>
 
           {/* Mobile Menu Button */}
-          <button className="p-2 text-gray-700 md:hidden" onClick={() => setIsOpen((prev) => !prev)} aria-label="Toggle menu">
+          <button
+            className="p-2 text-gray-700 md:hidden"
+            onClick={() => setIsOpen((prev) => !prev)}
+            aria-label="Toggle menu"
+          >
             {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
           </button>
         </Container>
@@ -111,15 +143,21 @@ const Header = () => {
                   onClick={() => setIsOpen(false)}
                   className={({ isActive }) =>
                     `rounded-lg px-3 py-2.5 text-base font-medium transition-colors ${
-                      isActive ? "bg-white-50 text-white-600" : "text-gray-700 hover:bg-gray-50"
+                      isActive
+                        ? "bg-white-50 text-white-600"
+                        : "text-gray-700 hover:bg-gray-50"
                     }`
                   }
                 >
                   {item.name}
                 </NavLink>
               ))}
-              <Link to="/contact" onClick={() => setIsOpen(false)} className="mt-2">
-                <Button variant="gradient" className="w-full bg-white px-3 text-sm font-semibold text-primary">
+              <Link
+                to="/contact"
+                onClick={() => setIsOpen(false)}
+                className="mt-2"
+              >
+                <Button className="w-full bg-white px-3 text-sm font-semibold text-primary">
                   Get Quote
                 </Button>
               </Link>

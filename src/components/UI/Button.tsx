@@ -24,9 +24,6 @@ const Button = ({
   const variants = {
     gradient:
       "bg-gradient-to-r from-[#FFB000] to-[#FF7A00] text-white hover:opacity-90 shadow-lg",
-
-    solid: "bg-[#0F172A] text-white hover:bg-[#1E293B]",
-
     outline:
       "border border-[#0F172A] text-[#0F172A] hover:bg-[#0F172A] hover:text-white",
 
