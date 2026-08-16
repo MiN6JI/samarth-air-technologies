@@ -157,9 +157,9 @@ const Header = () => {
                 onClick={() => setIsOpen(false)}
                 className="mt-2"
               >
-                <Button className="w-full bg-white px-3 text-sm font-semibold text-primary">
+                <button className="w-full bg-white px-3 text-sm font-semibold text-primary">
                   Get Quote
-                </Button>
+                </button>
               </Link>
             </Container>
           </div>
