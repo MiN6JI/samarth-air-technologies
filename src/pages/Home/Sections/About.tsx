@@ -1,7 +1,5 @@
 import Button from "../../../components/UI/Button";
 import { HiOutlineCheckCircle } from "react-icons/hi2";
-import { HiOutlineShoppingCart } from "react-icons/hi2";
-import { PiSquaresFourBold, PiStackBold } from "react-icons/pi";
 import Container from "../../../components/UI/Container";
 
 export default function About() {

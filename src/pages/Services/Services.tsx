@@ -1,7 +1,6 @@
 import React from "react";
 import { FiCheck, FiWind, FiZap, FiSun, FiAlertTriangle } from "react-icons/fi";
 import Container from "../../components/UI/Container";
-import Button from "../../components/UI/Button";
 
 /**
  * ServiceCatalog

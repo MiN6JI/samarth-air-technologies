@@ -52,9 +52,11 @@ const Header = () => {
 
   // Close mobile menu on route change
   useEffect(() => {
+    /* eslint-disable react-hooks/set-state-in-effect */
     setIsOpen(false);
     setMobileServicesOpen(false);
     setDesktopDropdown(false);
+    /* eslint-enable react-hooks/set-state-in-effect */
   }, [location.pathname]);
 
   const linkClasses = ({ isActive }: { isActive: boolean }) =>

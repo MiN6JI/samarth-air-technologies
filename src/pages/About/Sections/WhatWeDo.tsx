@@ -1,4 +1,3 @@
-// src/components/WhatWeDo/WhatWeDoSection.tsx
 import { HiOutlineArrowUpRight } from "react-icons/hi2";
 import { FaPlay, FaStar } from "react-icons/fa";
 import { HiOutlineCog6Tooth } from "react-icons/hi2";

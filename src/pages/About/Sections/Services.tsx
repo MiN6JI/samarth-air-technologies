@@ -1,4 +1,3 @@
-// src/components/About/AboutSection.tsx
 import { HiOutlineArrowUpRight } from "react-icons/hi2";
 import { FaPlay } from "react-icons/fa";
 import { HiOutlineShieldCheck, HiOutlineCog6Tooth } from "react-icons/hi2";
