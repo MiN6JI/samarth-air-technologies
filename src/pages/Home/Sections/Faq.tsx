@@ -35,15 +35,16 @@ export default function FAQSection() {
       <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
         {/* Left */}
         <div>
-          <p className="text-green-600 font-semibold uppercase tracking-wider">
-            FAQ
-          </p>
+          <div className="flex items-center gap-2 text-sm font-semibold tracking-[0.2em] text-slate-500">
+            <span className="h-2 w-2 rounded-full bg-primary" />
+            FREQUENTLY ASKED QUESTIONS
+          </div>
 
           <h2 className="mt-3 text-4xl md:text-5xl font-bold leading-tight">
-            Frequently Asked Questions
+            Ask Me Anything <br /> you want
           </h2>
 
-          <p className="mt-6 text-gray-600 leading-7">
+          <p className="mt-6 text-slate-600">
             Everything you need to know about our rooftop solar solutions.
           </p>
         </div>
@@ -60,7 +61,9 @@ export default function FAQSection() {
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-gray-50 transition-colors"
+                  className={`w-full flex items-center justify-between px-6 py-5 text-left transition-colors ${
+                    isOpen ? "bg-primary text-white" : "hover:bg-gray-50"
+                  }`}
                 >
                   <span className="font-semibold text-lg">{faq.question}</span>
 

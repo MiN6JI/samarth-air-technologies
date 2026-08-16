@@ -4,11 +4,11 @@ import Container from "../UI/Container";
 
 const Footer = () => {
   return (
-    <footer className="mt-auto bg-gray-900 text-gray-300">
+    <footer className="mt-auto bg-primary text-gray-300">
       <Container className="grid gap-10 py-12 md:grid-cols-3">
         {/* Company */}
         <div>
-          <h2 className="mb-4 text-2xl font-bold text-white">GK India</h2>
+          <h2 className="mb-4 text-4xl font-extrabold text-white">LOGO</h2>
 
           <p className="leading-7">
             Delivering innovative technology solutions with quality and
@@ -18,7 +18,7 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-          <h3 className="mb-4 text-lg font-semibold text-white">Quick Links</h3>
+          <h3 className="mb-4 text-lg font-semibold text-white">Information</h3>
 
           <ul className="space-y-2">
             <li>
@@ -57,15 +57,16 @@ const Footer = () => {
         <div>
           <h3 className="mb-4 text-lg font-semibold text-white">Contact</h3>
 
-          <p>Email: info@gkindia.com</p>
-          <p>Phone: +91 98765 43210</p>
+          <p>Email: info@gmail.com</p>
+          <p>Phone: +91 73047 39002</p>
           <p>India</p>
         </div>
       </Container>
 
-      <div className="border-t border-gray-800">
-        <Container className="py-5 text-center text-sm text-gray-500">
-          © {new Date().getFullYear()} GK India. All rights reserved.
+      <div className="border-t border-neutral-300">
+        <Container className="py-5 text-center text-sm text-neutral-300">
+          © {new Date().getFullYear()} Samartha Air Technologies. All rights
+          reserved.
         </Container>
       </div>
     </footer>

@@ -1,6 +1,9 @@
 import Hero from "./Sections/Hero";
-import Stats from "./Sections/Stats";
-import Trust from "./Sections/Trust";
+import Features from "./Sections/Features";
+import About from "./Sections/About";
+import StatsBar from "./Sections/StatsBar";
+import Cta from "./Sections/Cta";
+
 import Calculator from "./Sections/Calculator";
 import Comparison from "./Sections/comparision";
 import MonitoringApp from "./Sections/MonitoringApp";
@@ -12,15 +15,14 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <Stats />
-      <Trust />
-      <Comparison />
-      <Calculator />
-      <MonitoringApp />
-      <TrueSection />
+      <Features />
+      <About />
+      <StatsBar />
       <Faq />
-      <GoodZeroBanner />
-      <Blogs />
+      <Cta
+        backgroundImage={"https://craftin.in/images/electrical-sample.jpg"}
+        onButtonClick={() => console.log("chat clicked")}
+      />
     </>
   );
 };

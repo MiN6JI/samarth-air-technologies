@@ -4,9 +4,7 @@ import Home from "../pages/Home/Home";
 import About from "../pages/About/About";
 import Calculator from "../pages/Calculator/Calculator";
 // Services
-import Commercial from "../pages/Services/Commercial";
-import Residential from "../pages/Services/Residential";
-import Maintenance from "../pages/Services/Maintenance";
+import Services from "../pages/Services/Services";
 
 import Contact from "../pages/Contact/Contact";
 import NotFound from "../pages/NotFound/NotFound";
@@ -22,9 +20,7 @@ const AppRoutes = () => {
 
       <Route path="/calculator" element={<Calculator />} />
 
-      <Route path="/services/commercial" element={<Commercial />} />
-      <Route path="/services/residential" element={<Residential />} />
-      <Route path="/services/maintenance" element={<Maintenance />} />
+      <Route path="/services" element={<Services />} />
 
       {/* 404 */}
       <Route path="*" element={<NotFound />} />

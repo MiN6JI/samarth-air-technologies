@@ -8,6 +8,15 @@ export default {
       fontFamily: {
         sans: ["Plus Jakarta Sans", "system-ui", "sans-serif"],
       },
+      keyframes: {
+        "logo-scroll": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        "logo-scroll": "logo-scroll linear infinite",
+      },
     },
     colors: {
       sky: "#EAF3FB", // background mist, top of page gradient

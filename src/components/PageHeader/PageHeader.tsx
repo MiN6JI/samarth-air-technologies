@@ -1,80 +1,79 @@
-// src/components/PageHeader/PageHeader.tsx
-import { useLocation } from "react-router-dom";
-import Breadcrumb from "./Breadcrumbs";
+import { FiChevronRight, FiHome } from "react-icons/fi";
 import Container from "../UI/Container";
 
-export interface PageHeaderConfig {
-  title: string;
-  image: string;
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
 }
 
-export const pageHeaderData: Record<string, PageHeaderConfig> = {
-  "/about": {
-    title: "About Us",
-    image: "/images/headers/about.jpg",
-  },
-  "/services": {
-    title: "Our Services",
-    image: "/images/headers/services.jpg",
-  },
-  "/contact": {
-    title: "Contact Us",
-    image: "/images/headers/contact.jpg",
-  },
-};
+interface PageHeaderProps {
+  backgroundImage: string;
+  pageName: string;
+  breadcrumbs: BreadcrumbItem[];
+}
 
-export const defaultPageHeader: PageHeaderConfig = {
-  title: "GK India",
-  image: "/images/headers/default.jpg",
-};
-
-export const PageHeader = () => {
-  const location = useLocation();
-  const path = location.pathname;
-
-  // Find config for current path, fallback to default
-  const config = pageHeaderData[path] || defaultPageHeader;
-
+const PageHeader = ({
+  backgroundImage,
+  pageName,
+  breadcrumbs,
+}: PageHeaderProps) => {
   return (
-    <div className="relative overflow-hidden bg-slate-900 py-16 text-white md:py-24">
-      {/* Background Decor - Radial gradients for modern premium look */}
-      <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute top-[-40%] left-[-10%] h-[150%] w-[60%] rounded-full bg-blue-600/25 blur-[120px]" />
-        <div className="absolute bottom-[40%] right-[10%] h-[150%] w-[60%] rounded-full bg-emerald-600/15 blur-[120px]" />
-        
-        {/* Optional background image overlay */}
-        {config.image && (
-          <img
-            src={config.image}
-            alt={config.title}
-            onError={(e) => {
-              // Hide image if it fails to load (e.g. 404)
-              e.currentTarget.style.display = "none";
-            }}
-            className="absolute inset-0 h-full w-full object-cover object-center opacity-30 mix-blend-overlay transition-opacity duration-700"
-          />
-        )}
-        
-        {/* Dark theme overlay mask */}
-        <div className="absolute inset-0 bg-linear-to-b from-slate-950/20 via-slate-900/40 to-slate-950/60" />
-      </div>
+    <section
+      className="relative bg-cover bg-center"
+      style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
+      {/* dark overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-zinc-950/90 via-zinc-950/60 to-zinc-950/10" />
 
-      <Container className="relative z-10">
-        <div className="flex flex-col items-center text-center md:items-start md:text-left gap-4">
-          {/* Breadcrumbs Wrapper */}
-          <div className="inline-flex items-center rounded-full bg-white/5 px-4 py-1.5 backdrop-blur-md border border-white/10 shadow-inner">
-            <Breadcrumb currentLabel={config.title} />
-          </div>
+      {/* grid pattern overlay */}
+      <div
+        className="absolute inset-0 opacity-20"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, rgba(255,255,255,0.4) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.4) 1px, transparent 1px)",
+          backgroundSize: "48px 48px",
+        }}
+      />
 
-          {/* Heading */}
-          <h1 className="mt-2 text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl drop-shadow-md">
-            {config.title}
+      <Container>
+        <div className="relative py-20 md:py-28">
+          <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">
+            {pageName}
           </h1>
-          
-          {/* Accent decoration bar */}
-          <div className="h-1.5 w-16 rounded-full bg-gradient-to-r from-blue-500 to-emerald-500" />
+
+          <nav className="mt-4 flex items-center flex-wrap gap-1 text-sm md:text-base text-gray-200">
+            <a
+              href="/"
+              className="flex items-center gap-1 hover:text-primary-light transition-colors"
+            >
+              <FiHome className="w-4 h-4" />
+              Home
+            </a>
+
+            {breadcrumbs.map((item, index) => {
+              const isLast = index === breadcrumbs.length - 1;
+
+              return (
+                <span key={index} className="flex items-center gap-1">
+                  <FiChevronRight className="w-4 h-4 text-gray-400" />
+                  {item.href && !isLast ? (
+                    <a
+                      href={item.href}
+                      className="hover:text-primary-light transition-colors"
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <span className="text-White font-medium">{item.label}</span>
+                  )}
+                </span>
+              );
+            })}
+          </nav>
         </div>
       </Container>
-    </div>
+    </section>
   );
 };
+
+export default PageHeader;

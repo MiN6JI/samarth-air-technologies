@@ -25,8 +25,6 @@ const Button = ({
     gradient:
       "bg-gradient-to-r from-[#FFB000] to-[#FF7A00] text-white hover:opacity-90 shadow-lg",
 
-    solid: "bg-[#0F172A] text-white hover:bg-[#1E293B]",
-
     outline:
       "border border-[#0F172A] text-[#0F172A] hover:bg-[#0F172A] hover:text-white",
 
@@ -40,8 +38,8 @@ const Button = ({
       disabled={disabled}
       className={`
         inline-flex items-center justify-center gap-2
-        rounded-xl
         px-6 py-3
+        rounded-full
         font-medium
         transition-all duration-300
         disabled:cursor-not-allowed disabled:opacity-50
