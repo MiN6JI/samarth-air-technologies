@@ -3,7 +3,6 @@ import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { HiMenu, HiX, HiMail, HiPhone, HiArrowRight } from "react-icons/hi";
 
-import Button from "../UI/Button";
 import Container from "../UI/Container";
 import { FaLinkedinIn } from "react-icons/fa6";
 
@@ -116,10 +115,10 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <Link to="/contact" className="hidden md:block">
-            <Button className="bg-white px-6 text-sm font-semibold text-primary transition-transform hover:scale-[1.03]">
+            <button className="flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-bold text-primary transition hover:bg-primary-light">
               Get Quote
               <HiArrowRight size={16} />
-            </Button>
+            </button>
           </Link>
 
           {/* Mobile Menu Button */}

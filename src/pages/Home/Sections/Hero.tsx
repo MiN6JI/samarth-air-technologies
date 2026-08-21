@@ -1,5 +1,4 @@
 import { HiPhone } from "react-icons/hi";
-import Button from "../../../components/UI/Button";
 import Container from "../../../components/UI/Container";
 
 export default function AcHero() {
@@ -19,33 +18,30 @@ export default function AcHero() {
         {/* Eyebrow */}
         <div className="mb-5 flex items-center gap-2 text-sm font-semibold tracking-[0.2em] text-white">
           <span className="h-2 w-2 rounded-full bg-primary" />
-          WELCOME TO SAMARTH AIR TECHNOLOGY
+          WELCOME TO SAMARTH AIR TECHNOLOGIES
         </div>
 
         {/* Headline */}
         <h1 className="max-w-2xl text-5xl font-extrabold leading-[1.05] text-white sm:text-6xl lg:text-7xl">
-          Reliable air conditioning services you can trust
+          Complete MEP & Energy Solutions You can Trust
         </h1>
 
         {/* Subcopy */}
         <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-200 sm:text-lg">
-          Experience year-round comfort with our trusted air conditioning
-          solutions. From expert installation to fast repairs and regular
-          maintenance.
-        </p>
+          From HAVC and fire safety to identitcal electrical engineering and solar power, solar  power, we deliver reliable, end-to-end infrastructure solutions for your facultiy</p>
 
         {/* CTAs */}
         <div className="mt-10 flex flex-wrap items-center gap-6">
-          <Button className="rounded-full bg-primary px-8 py-4 text-sm font-bold text-white transition hover:bg-primary-dark">
+          <button className="rounded-full bg-primary px-8 py-4 text-sm font-bold text-white transition hover:bg-primary-dark">
             Request a Quote
-          </Button>
+          </button>
 
-          <Button className="flex items-center gap-3 text-sm font-bold text-white">
+          <button className="flex items-center gap-3 text-sm font-bold text-white">
             <span className="flex h-11 w-11 items-center justify-center rounded-full bg-primary text-white transition hover:bg-primary-dark">
               <HiPhone className="ml-0.5 h-4 w-4 fill-current" />
             </span>
             +91 73047 39002
-          </Button>
+          </button>
         </div>
       </Container>
     </section>

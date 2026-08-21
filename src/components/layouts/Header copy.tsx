@@ -10,7 +10,6 @@ import {
   HiArrowRight,
 } from "react-icons/hi";
 
-import Button from "../UI/Button";
 import Container from "../UI/Container";
 import { FaLinkedinIn } from "react-icons/fa6";
 
@@ -209,10 +208,10 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <Link to="/contact" className="hidden md:block">
-            <Button className="bg-white px-6 text-sm font-semibold text-primary transition-transform hover:scale-[1.03]">
+            <button className="bg-white px-6 text-sm font-semibold text-primary transition-transform hover:scale-[1.03]">
               Get Quote
               <HiArrowRight size={16} />
-            </Button>
+            </button>
           </Link>
 
           {/* Mobile Menu Button */}
@@ -293,12 +292,9 @@ const Header = () => {
                 onClick={() => setIsOpen(false)}
                 className="mt-2"
               >
-                <Button
-                  variant="gradient"
-                  className="w-full bg-white px-3 text-sm font-semibold text-primary"
-                >
+                <button className="w-full bg-white px-3 text-sm font-semibold text-primary">
                   Get Quote
-                </Button>
+                </button>
               </Link>
             </Container>
           </div>

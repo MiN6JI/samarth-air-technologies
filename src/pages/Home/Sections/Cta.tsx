@@ -1,5 +1,4 @@
 import Container from "../../../components/UI/Container";
-import Button from "../../../components/UI/Button";
 
 interface HeroCTAProps {
   backgroundImage: string;
@@ -44,12 +43,12 @@ const Cta = ({
             {description}
           </p>
 
-          <Button
+          <button
             onClick={onButtonClick}
             className="mt-8 px-6 py-3 bg-primary text-white font-semibold hover:opacity-90 transition-opacity"
           >
             {buttonText}
-          </Button>
+          </button>
         </div>
       </Container>
     </section>

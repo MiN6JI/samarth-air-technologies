@@ -5,7 +5,6 @@ import {
   HiOutlineLocationMarker,
 } from "react-icons/hi";
 
-import Button from "../../components/UI/Button";
 import Container from "../../components/UI/Container";
 
 interface FormData {
@@ -296,12 +295,12 @@ const ContactForm = () => {
                   )}
                 </div>
 
-                <Button
+                <button
                   type="submit"
                   className="w-full bg-primary py-3 text-sm font-semibold uppercase tracking-[0.1em] text-white transition-colors hover:bg-[#16211C]"
                 >
                   Submit Request
-                </Button>
+                </button>
 
                 {submitted && (
                   <p className="flex items-center gap-2  text-xs text-[#0E3B2E]">

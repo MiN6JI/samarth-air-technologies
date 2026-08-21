@@ -1,4 +1,3 @@
-import Button from "../../../components/UI/Button";
 import { HiOutlineCheckCircle } from "react-icons/hi2";
 import Container from "../../../components/UI/Container";
 
@@ -70,9 +69,9 @@ export default function About() {
             </div>
           </div>
           {/* CTA */}
-          <Button className="mt-8 bg-primary px-8 py-4 text-sm font-bold text-white transition hover:bg-primary-dark">
+          <button className="mt-8 bg-primary px-8 py-4 text-sm font-bold text-white transition hover:bg-primary-dark">
             Read More
-          </Button>
+          </button>
         </div>
 
         {/* Right: image collage */}

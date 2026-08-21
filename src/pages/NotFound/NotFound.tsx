@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 
-import Button from "../../components/UI/Button";
 import Container from "../../components/UI/Container";
 
 const NotFound = () => {
@@ -15,7 +14,9 @@ const NotFound = () => {
       </p>
 
       <Link to="/" className="mt-8">
-        <Button>Back to Home</Button>
+        <button className="mt-8 px-6 py-3 bg-primary text-white font-semibold hover:opacity-90 transition-opacity">
+          Back to Home
+        </button>
       </Link>
     </Container>
   );
