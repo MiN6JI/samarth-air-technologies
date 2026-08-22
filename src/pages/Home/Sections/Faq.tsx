@@ -2,24 +2,27 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "I'm not sure if I have enough space for a solar system.",
+    question:
+      "What HVAC services do you offer for residential and commercial spaces?",
     answer:
-      "Our experts will visit your home, evaluate your rooftop and power needs, then provide a free 3D design before you decide.",
+      "We provide complete end-to-end HVAC solutions, including system design, professional installation, routine maintenance, and emergency repair for air conditioning, VRF/VRV systems, and ventilation units to ensure year-round climate control and energy efficiency.",
   },
   {
-    question: "Do I need to pay a huge amount upfront?",
+    question:
+      "How do I know if my building has enough space for a rooftop solar system?",
     answer:
-      "No. Flexible EMI options are available and government subsidies help reduce the upfront investment.",
+      "Our team conducts a free site survey to inspect your rooftop area, shading, and structural strength. Based on your energy needs and available space, we design a customized solar setup—plus help you navigate government subsidies to minimize upfront costs.",
   },
   {
-    question: "How complicated is the subsidy process?",
+    question: "What fire safety systems do you install and maintain?",
     answer:
-      "We handle the entire subsidy paperwork from application to approval, making the process hassle-free.",
+      "We design, install, and service comprehensive fire protection systems, including automatic fire alarms, smoke detectors, fire hydrants, sprinklers, and portable extinguishers to keep your property safe and fully compliant with safety regulations.",
   },
   {
-    question: "How long does installation take?",
+    question:
+      "Do you handle both new electrical installations and maintenance?",
     answer:
-      "Once your design is approved, installation is typically completed within a day depending on weather and site conditions.",
+      "Yes! We handle full-scale electrical wiring, panel installations, power distribution, lighting design, and safety audits for new setups, as well as ongoing maintenance and quick troubleshooting for existing systems.",
   },
 ];
 

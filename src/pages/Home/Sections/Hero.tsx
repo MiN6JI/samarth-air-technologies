@@ -28,7 +28,10 @@ export default function AcHero() {
 
         {/* Subcopy */}
         <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-200 sm:text-lg">
-          From HAVC and fire safety to identitcal electrical engineering and solar power, solar  power, we deliver reliable, end-to-end infrastructure solutions for your facultiy</p>
+          From HAVC and fire safety to electrical engineering and solar power,
+          we deliver reliable, end-to-end infrastructure solutions for your
+          facility.
+        </p>
 
         {/* CTAs */}
         <div className="mt-10 flex flex-wrap items-center gap-6">

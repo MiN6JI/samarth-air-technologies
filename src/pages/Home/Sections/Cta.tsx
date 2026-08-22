@@ -10,8 +10,8 @@ interface HeroCTAProps {
 
 const Cta = ({
   backgroundImage,
-  heading = "Reliable Service from Start to Finish",
-  description = "We follow a streamlined process to ensure every air conditioning and HVAC repair is handled efficiently and with care. From your first call to the final inspection.",
+  heading = "Seamless Execution, Uncompromised Quality",
+  description = "We follow a streamlined process to ensure every HVAC, Fire Safety, Electrical, and Solar project is executed with precision. From your initial consultation to final testing and commissioning, we've got you covered.",
   buttonText = "Chat With Us",
   onButtonClick,
 }: HeroCTAProps) => {
@@ -45,7 +45,7 @@ const Cta = ({
 
           <button
             onClick={onButtonClick}
-            className="mt-8 px-6 py-3 bg-primary text-white font-semibold hover:opacity-90 transition-opacity"
+            className="mt-8 px-6 py-3 bg-primary text-white font-semibold hover:opacity-90 transition-opacity rounded-full"
           >
             {buttonText}
           </button>

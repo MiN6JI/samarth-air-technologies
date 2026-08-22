@@ -10,7 +10,7 @@ export default function About() {
           {/* Eyebrow */}
           <div className="flex items-center gap-2 text-sm font-semibold tracking-[0.2em] text-slate-500">
             <span className="h-2 w-2 rounded-full bg-primary" />
-            COOLING EXPERTS
+            SMART SOLUTIONS
           </div>
           {/* Heading */}
           <h2 className="mt-4 text-4xl font-extrabold leading-tight text-slate-900 sm:text-5xl">
@@ -18,17 +18,18 @@ export default function About() {
           </h2>
           {/* Subcopy */}
           <p className="mt-6 max-w-md text-slate-500">
-            Established in 2019 and based in Thane, CraftInnove Services (I)
-            Pvt. Ltd. (CISPL) is a trusted provider of Electrical, HVAC, Solar,
-            Fire Alarm, CCTV, and Painting solutions. Our mission is to deliver
-            reliable, energy-efficient, and cost-effective services with
-            professionalism and precision.
+            Established in 2021 and based in Bhandup, Samarth Air Technologies
+            is a leading provider of comprehensive HVAC, Fire Safety,
+            Electrical, and Solar Energy solutions. Our mission is to engineer
+            high-efficiency, reliable, and sustainable environments tailored to
+            our clients' unique needs.
           </p>
           <p className="mt-6 max-w-md text-slate-500">
-            With a team of qualified engineers and skilled technicians, we take
-            pride in executing projects of every scale — from residential
-            buildings to large commercial facilities. We focus on safety,
-            long-term performance, and complete customer satisfaction.
+            Backed by a dedicated team of certified engineers and skilled
+            technicians, we deliver end-to-end services—from initial design and
+            installation to long-term maintenance. Whether powering residential
+            spaces or securing large-scale commercial facilities, we are
+            committed to safety, innovation, and complete peace of mind.
           </p>
           {/* Feature rows
             <div className="mt-10 space-y-6">
@@ -69,7 +70,7 @@ export default function About() {
             </div>
           </div>
           {/* CTA */}
-          <button className="mt-8 bg-primary px-8 py-4 text-sm font-bold text-white transition hover:bg-primary-dark">
+          <button className="rounded-full mt-8 bg-primary px-8 py-4 text-sm font-bold text-white transition hover:bg-primary-dark">
             Read More
           </button>
         </div>

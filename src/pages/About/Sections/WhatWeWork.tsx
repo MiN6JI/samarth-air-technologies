@@ -4,24 +4,31 @@ import Container from "../../../components/UI/Container";
 const features = [
   {
     icon: PiDatabaseLight,
-    title: "Expert Heating Services",
+    title: "Expert HVAC & Climate Control",
     description:
-      "Providing fast, safe, and efficient heating solutions tailored",
+      "Providing fast, efficient, and reliable heating, cooling, and ventilation solutions tailored to your space.",
   },
   {
     icon: PiGlobeLight,
-    title: "Reliable Climate Control",
+    title: "Integrated Electrical & Solar",
     description:
-      "Providing fast, safe, and efficient heating solutions tailored",
+      "Delivering smart power distribution, expert electrical installations, and clean rooftop solar energy solutions.",
+  },
+  {
+    icon: PiGlobeLight,
+    title: "Complete Fire Protection",
+    description:
+      "Ensuring total safety with state-of-the-art fire detection, alarm systems, and suppression equipment.",
   },
 ];
 
 export default function WhatWeDo() {
   return (
-    <section className="w-full bg-primary-dark py-24">
+    <section className="w-full overflow-hidden bg-primary-dark py-24">
       <Container>
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-center">
-          {/* Left: text content */}
+        {/* Main content */}
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
+          {/* Left: text */}
           <div>
             {/* Eyebrow */}
             <div className="flex items-center gap-2 text-sm font-semibold tracking-[0.2em] text-white">
@@ -31,41 +38,26 @@ export default function WhatWeDo() {
 
             {/* Heading */}
             <h2 className="mt-4 text-4xl font-extrabold leading-tight text-white sm:text-5xl">
-              Delivering trusted solutions reliable heating &amp; cooling
+              Delivering Trusted MEP, Safety & Solar Solutions
             </h2>
 
+            {/* Description */}
             <div className="mt-5 flex flex-col gap-2.5">
               <p className="text-white">
-                Established in 2019, CraftInnove Services India Pvt. Ltd. is a
-                professionally managed Electro-Mechanical (EL-Mech) organization
-                delivering innovative, reliable, and sustainable engineering
-                solutions.
+                Established in 2021 and based in Bhandup, Samarth Air
+                Technologies is a professionally managed engineering
+                organization delivering innovative, reliable, and sustainable
+                MEP solutions. We specialize in end-to-end HVAC, Fire Safety,
+                Electrical, and Solar Energy systems tailored for residential,
+                commercial, and industrial facilities.
               </p>
 
               <p className="text-white">
-                We are a Government-Approved Electrical Contractor, licensed by
-                the Government of Maharashtra, operating as a 100% compliant
-                organization aligned with all statutory and industry standards.
+                Operating with an uncompromising commitment to safety and
+                quality, our skilled technical team ensures seamless execution,
+                full statutory compliance, and long-term energy efficiency
+                across every project.
               </p>
-            </div>
-
-            {/* Badge + feature cards */}
-            <div className="mt-16 flex flex-col gap-6 sm:flex-row sm:items-start">
-              {/* Feature cards */}
-              {features.map(({ icon: Icon, title, description }) => (
-                <div
-                  key={title}
-                  className="w-full max-w-xs rounded-2xl bg-white p-6 sm:w-64"
-                >
-                  <Icon className="h-8 w-8 text-primary" />
-                  <h3 className="mt-5 text-lg font-bold text-slate-900">
-                    {title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-slate-500">
-                    {description}
-                  </p>
-                </div>
-              ))}
             </div>
           </div>
 
@@ -74,9 +66,29 @@ export default function WhatWeDo() {
             <img
               src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop"
               alt="Technician servicing an outdoor AC unit"
-              className="h-[500px] w-full object-cover"
+              className="h-[668px] w-full object-cover"
             />
           </div>
+        </div>
+
+        {/* Feature cards */}
+        <div className="relative z-20 -mt-[250px] grid grid-cols-1 gap-6 sm:grid-cols-3 lg:w-[780px]">
+          {features.map(({ icon: Icon, title, description }) => (
+            <div
+              key={title}
+              className="min-h-[300px] bg-white p-7 shadow-xl rounded-2xl"
+            >
+              <Icon className="h-8 w-8 text-primary" />
+
+              <h3 className="mt-7 text-lg font-bold leading-relaxed text-slate-900">
+                {title}
+              </h3>
+
+              <p className="mt-4 text-sm leading-relaxed text-slate-500">
+                {description}
+              </p>
+            </div>
+          ))}
         </div>
       </Container>
     </section>

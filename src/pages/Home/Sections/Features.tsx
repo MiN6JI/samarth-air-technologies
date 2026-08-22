@@ -1,28 +1,26 @@
-import { FaHouseChimney } from "react-icons/fa6";
-import { HiOutlineShoppingCart } from "react-icons/hi2";
-import { PiBankBold } from "react-icons/pi";
-import { LiaRulerCombinedSolid } from "react-icons/lia";
+import { PiInfo } from "react-icons/pi";
+
 const features = [
   {
-    icon: FaHouseChimney,
+    icon: PiInfo,
     title: "HVAC Service & AMC",
     description:
       "Get support anytime, day or night, with no time constraints—just solutions.",
   },
   {
-    icon: HiOutlineShoppingCart,
+    icon: PiInfo,
     title: "Solar Install & AMC",
     description:
       "Connect with specialized professionals who can guide you through complex issues.",
   },
   {
-    icon: PiBankBold,
+    icon: PiInfo,
     title: "Electrical Maintenance",
     description:
       "Explore our clear and transparent pricing structure to keep you informed.",
   },
   {
-    icon: LiaRulerCombinedSolid,
+    icon: PiInfo,
     title: "Fire Alarm & Safety",
     description:
       "Need something specific? We offer flexible solutions tailored to your home's unique needs.",
@@ -34,9 +32,9 @@ export default function KeyAdvantages() {
     <section className="w-full bg-neutral-100 px-6 py-24 sm:px-10 lg:px-16">
       <div className="mx-auto max-w-7xl">
         {/* Eyebrow */}
-        <div className="flex items-center justify-center gap-2 text-sm font-semibold text-slate-900">
-          <span aria-hidden="true">🔧</span>
-          Our Features
+        <div className="mb-5 flex items-center justify-center gap-2 text-sm font-semibold tracking-[0.2em] text-slate-500">
+          <span className="h-2 w-2 rounded-full bg-primary" />
+          Features
         </div>
 
         {/* Heading */}
