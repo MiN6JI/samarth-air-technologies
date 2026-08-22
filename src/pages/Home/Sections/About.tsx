@@ -58,7 +58,7 @@ export default function About() {
           <div className="mt-8 flex flex-wrap gap-x-10 gap-y-4">
             <div className="flex items-center gap-2 text-slate-600">
               <HiOutlineCheckCircle className="h-5 w-5 shrink-0 rounded-full bg-primary p-0.5 text-white" />
-              Expert service in HVAC, Solar, and Electrical installations
+              Expert service in HVAC, Solar, Fire and Electrical installations
             </div>
             <div className="flex items-center gap-2 text-slate-600">
               <HiOutlineCheckCircle className="h-5 w-5 shrink-0 rounded-full bg-primary p-0.5 text-white" />
