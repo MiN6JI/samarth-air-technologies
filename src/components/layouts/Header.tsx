@@ -90,7 +90,7 @@ const Header = () => {
         </Container>
       </header>
 
-      <header className="sticky top-0 z-50">
+      <header className="sticky top-0 z-50 bg-white">
         <Container className="flex h-22 items-center justify-between bg-white">
           <Link
             to="/"
