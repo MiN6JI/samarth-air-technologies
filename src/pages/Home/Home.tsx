@@ -15,7 +15,7 @@ const Home = () => {
       <StatsBar />
       <Faq />
       <Cta
-        backgroundImage={"https://craftin.in/images/electrical-sample.jpg"}
+        backgroundImage={"/services/Electrical-variant.webp"}
         onButtonClick={() => console.log("chat clicked")}
       />
     </>

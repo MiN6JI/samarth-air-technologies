@@ -1,26 +1,24 @@
-import { PiInfo } from "react-icons/pi";
-
 const features = [
   {
-    icon: PiInfo,
+    image: "/duo-tone icons/repair-service.png",
     title: "HVAC Service & AMC",
     description:
       "Get support anytime, day or night, with no time constraints—just solutions.",
   },
   {
-    icon: PiInfo,
+    image: "/duo-tone-icons/solar-house.png",
     title: "Solar Install & AMC",
     description:
       "Connect with specialized professionals who can guide you through complex issues.",
   },
   {
-    icon: PiInfo,
+    image: "/duo-tone-icons/electricity.png",
     title: "Electrical Maintenance",
     description:
       "Explore our clear and transparent pricing structure to keep you informed.",
   },
   {
-    icon: PiInfo,
+    image: "/duo-tone-icons/alarm-variant.png",
     title: "Fire Alarm & Safety",
     description:
       "Need something specific? We offer flexible solutions tailored to your home's unique needs.",
@@ -44,9 +42,13 @@ export default function KeyAdvantages() {
 
         {/* Feature grid */}
         <div className="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
-          {features.map(({ icon: Icon, title, description }) => (
+          {features.map(({ image, title, description }) => (
             <div key={title} className="flex flex-col">
-              <Icon className="h-11 w-11 text-primary" strokeWidth={1.5} />
+              <img
+                src={image}
+                alt={title}
+                className="h-12 w-12 object-contain"
+              />
 
               <h3 className="mt-5 text-xl font-bold text-slate-900">{title}</h3>
 

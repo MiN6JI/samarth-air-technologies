@@ -88,23 +88,23 @@ export default function About() {
           </div>
 
           <img
-            src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop"
-            alt="Technician installing an outdoor AC unit on a brick wall"
+            src="public/services/HVAC.webp"
+            alt="HVAC Service"
             className="col-span-1 h-80 w-full rounded-2xl object-cover"
           />
           <img
-            src="https://demo.awaikenthemes.com/coolify/demo2/wp-content/uploads/2025/07/about-image-3.jpg"
-            alt="Technician servicing an outdoor AC unit"
+            src="public\services\Fire.webp"
+            alt="Fire Service"
             className="col-span-1 mt-10 h-60 w-full rounded-2xl object-cover"
           />
           <img
-            src="https://demo.awaikenthemes.com/coolify/demo2/wp-content/uploads/2025/07/about-image-4.jpg"
-            alt="Two technicians installing a wall-mounted AC unit"
+            src="public/services/Electrical.webp"
+            alt="Electrical Service"
             className="col-span-1 h-60 w-full rounded-2xl object-cover"
           />
           <img
-            src="https://demo.awaikenthemes.com/coolify/demo2/wp-content/uploads/2025/07/about-image-2.jpg"
-            alt="Technician servicing a ceiling-mounted AC unit"
+            src="public/services/Solar.webp"
+            alt="Solar Service"
             className="col-span-1 mt-4 h-72 w-full rounded-2xl object-cover"
           />
 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { HiMenu, HiX, HiMail, HiPhone, HiArrowRight } from "react-icons/hi";
 
@@ -24,15 +24,15 @@ const Header = () => {
   }, [location.pathname]);
 
   const linkClasses = ({ isActive }: { isActive: boolean }) =>
-    `relative py-1 text-lg font-medium text-white transition-colors after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:rounded-full after:bg-white after:transition-all after:content-[''] ${
+    `relative py-1 text-lg font-medium text-primary transition-colors after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:rounded-full after:bg-primary after:transition-all after:content-[''] ${
       isActive
-        ? "text-white after:w-full"
-        : "text-white hover:text-white after:w-0 hover:after:w-full"
+        ? "text-primary after:w-full"
+        : "text-primary hover:text-primary after:w-0 hover:after:w-full"
     }`;
 
   return (
     <>
-      <header className="bg-white/80 backdrop-blur-md border-b border-gray-100">
+      <header className="bg-primary backdrop-blur-md border-b border-gray-100">
         <Container className="flex h-14 items-center justify-between">
           <Link
             to="/"
@@ -69,7 +69,7 @@ const Header = () => {
               rel="noopener noreferrer"
               className="p-2 bg-primary-light rounded-full text-primary hover:bg-primary hover:text-white transition-colors"
             >
-              <FaTwitter size={12} />
+              <FaWhatsapp size={12} />
             </a>
           </Link>
 
@@ -78,26 +78,32 @@ const Header = () => {
               <div className="p-1 bg-primary-light rounded-full">
                 <HiMail size={18} className="text-primary" />
               </div>
-              <p className="font-semibold text-primary">xyz@gmail.com</p>
+              <p className="font-semibold text-white/90">xyz@gmail.com</p>
             </div>
             <div className="flex items-center gap-2">
               <div className="p-1 bg-primary-light rounded-full">
                 <HiPhone size={16} className="text-primary" />
               </div>
-              <p className="font-semibold text-primary">+91 98345 34845</p>
+              <p className="font-semibold text-white/90">+91 98345 34845</p>
             </div>
           </div>
         </Container>
       </header>
 
-      <header className="bg-primary sticky top-0 z-50">
-        <Container className="flex h-22 items-center justify-between bg-primary">
+      <header className="sticky top-0 z-50">
+        <Container className="flex h-22 items-center justify-between bg-white">
           <Link
             to="/"
             className="text-xl font-bold tracking-tight text-white"
             onClick={() => setIsOpen(false)}
           >
-            <h2 className="font-extrabold text-white text-4xl">LOGO</h2>
+            <h2 className="font-extrabold text-white text-4xl">
+              <img
+                src="/logo/Smarath-air-technologies-logo-1.png"
+                alt="samarth-air-technologies-logo"
+                className="h-16 w-auto object-contain"
+              />
+            </h2>
           </Link>
 
           {/* Desktop Navigation */}
@@ -115,7 +121,7 @@ const Header = () => {
 
           {/* Desktop CTA */}
           <Link to="/contact" className="hidden md:block">
-            <button className="flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-bold text-primary transition hover:bg-primary-light">
+            <button className="flex items-center gap-2 rounded-full bg-primary px-8 py-4 text-sm font-bold text-white transition hover:bg-primary-dark">
               Get Quote
               <HiArrowRight size={16} />
             </button>

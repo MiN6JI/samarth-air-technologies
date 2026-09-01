@@ -6,7 +6,7 @@ export default function AcHero() {
     <section className="relative w-full min-h-[640px] overflow-hidden bg-zinc-900">
       {/* Background image */}
       <img
-        src="https://demo.awaikenthemes.com/coolify/demo2/wp-content/uploads/2025/07/hero-img.jpg"
+        src="/services/HVAC-variant.webp"
         alt="Technician servicing an air conditioning unit"
         className="absolute inset-0 h-full w-full object-cover"
       />
