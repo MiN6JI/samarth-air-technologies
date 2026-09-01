@@ -1,6 +1,6 @@
 const features = [
   {
-    image: "/duo-tone icons/repair-service.png",
+    image: "/duo-tone-icons/repair-service.png",
     title: "HVAC Service & AMC",
     description:
       "Get support anytime, day or night, with no time constraints—just solutions.",
