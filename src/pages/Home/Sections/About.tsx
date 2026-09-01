@@ -88,22 +88,22 @@ export default function About() {
           </div>
 
           <img
-            src="public/services/HVAC.webp"
+            src="/services/HVAC.webp"
             alt="HVAC Service"
             className="col-span-1 h-80 w-full rounded-2xl object-cover"
           />
           <img
-            src="public\services\Fire.webp"
+            src="/services/Fire.webp"
             alt="Fire Service"
             className="col-span-1 mt-10 h-60 w-full rounded-2xl object-cover"
           />
           <img
-            src="public/services/Electrical.webp"
+            src="/services/Electrical.webp"
             alt="Electrical Service"
             className="col-span-1 h-60 w-full rounded-2xl object-cover"
           />
           <img
-            src="public/services/Solar.webp"
+            src="/services/Solar.webp"
             alt="Solar Service"
             className="col-span-1 mt-4 h-72 w-full rounded-2xl object-cover"
           />
