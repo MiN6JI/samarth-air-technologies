@@ -1,6 +1,8 @@
 import PageHeader from "../../components/PageHeader/PageHeader";
 import WhatWeWork from "./Sections/WhatWeWork";
+import Timeline from "./Sections/Timeline";
 import Cta from "../Home/Sections/Cta";
+
 const About = () => {
   return (
     <>
@@ -10,6 +12,7 @@ const About = () => {
         breadcrumbs={[{ label: "About Us", href: "/about" }]}
       />
       <WhatWeWork />
+      <Timeline />
       <Cta
         backgroundImage={
           "https://demo.awaikenthemes.com/coolify/demo2/wp-content/uploads/2025/07/what-we-do-image.jpg"
