@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
-import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+// import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
+// import { FaLinkedinIn } from "react-icons/fa6";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { HiMenu, HiX, HiMail, HiPhone, HiArrowRight } from "react-icons/hi";
 
 import Container from "../UI/Container";
-import { FaLinkedinIn } from "react-icons/fa6";
 
 const navItems = [
   { name: "Home", path: "/" },
@@ -34,7 +34,7 @@ const Header = () => {
     <>
       <header className="bg-primary backdrop-blur-md border-b border-gray-100">
         <Container className="flex h-14 items-center justify-between">
-          <Link
+          {/* <Link
             to="/"
             className="flex items-center gap-3"
             onClick={() => setIsOpen(false)}
@@ -71,20 +71,22 @@ const Header = () => {
             >
               <FaWhatsapp size={12} />
             </a>
-          </Link>
+          </Link> */}
 
           <div className="flex justify-center items-center gap-4">
             <div className="flex items-center gap-2">
-              <div className="p-1 bg-primary-light rounded-full">
-                <HiMail size={18} className="text-primary" />
+              <div className="p-1 rounded-full">
+                <HiMail size={18} className="text-white" />
               </div>
-              <p className="font-semibold text-white/90">xyz@gmail.com</p>
+              <p className="font-semibold text-white/90">
+                samarthairtechnologies@gmail.com
+              </p>
             </div>
             <div className="flex items-center gap-2">
-              <div className="p-1 bg-primary-light rounded-full">
-                <HiPhone size={16} className="text-primary" />
+              <div className="p-1 rounded-full">
+                <HiPhone size={16} className="text-white" />
               </div>
-              <p className="font-semibold text-white/90">+91 98345 34845</p>
+              <p className="font-semibold text-white/90">+91 73047 39002</p>
             </div>
           </div>
         </Container>
@@ -92,18 +94,12 @@ const Header = () => {
 
       <header className="sticky top-0 z-50 bg-white">
         <Container className="flex h-22 items-center justify-between bg-white">
-          <Link
-            to="/"
-            className="text-xl font-bold tracking-tight text-white"
-            onClick={() => setIsOpen(false)}
-          >
-            <h2 className="font-extrabold text-white text-4xl">
-              <img
-                src="/logo/Smarath-air-technologies-logo-1.png"
-                alt="samarth-air-technologies-logo"
-                className="h-16 w-auto object-contain"
-              />
-            </h2>
+          <Link to="/" onClick={() => setIsOpen(false)}>
+            <img
+              src="/logo/Smarath-air-technologies-logo-1.png"
+              alt="samarth-air-technologies-logo"
+              className="h-18 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}

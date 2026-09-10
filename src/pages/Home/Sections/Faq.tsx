@@ -80,7 +80,7 @@ export default function FAQSection() {
                     isOpen ? "max-h-40" : "max-h-0"
                   }`}
                 >
-                  <div className="px-6 pb-6 text-gray-600 leading-7">
+                  <div className="px-6 py-6 text-gray-600 leading-7">
                     {faq.answer}
                   </div>
                 </div>

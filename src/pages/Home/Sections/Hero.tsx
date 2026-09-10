@@ -1,5 +1,6 @@
 import { HiPhone } from "react-icons/hi";
 import Container from "../../../components/UI/Container";
+import { Link } from "react-router-dom";
 
 export default function AcHero() {
   return (
@@ -35,9 +36,11 @@ export default function AcHero() {
 
         {/* CTAs */}
         <div className="mt-10 flex flex-wrap items-center gap-6">
-          <button className="rounded-full bg-primary px-8 py-4 text-sm font-bold text-white transition hover:bg-primary-dark">
-            Request a Quote
-          </button>
+          <Link to="/contact" className="hidden md:block">
+            <button className="rounded-full bg-primary px-8 py-4 text-sm font-bold text-white transition hover:bg-primary-dark">
+              Request a Quote
+            </button>
+          </Link>
 
           <button className="flex items-center gap-3 text-sm font-bold text-white">
             <span className="flex h-11 w-11 items-center justify-center rounded-full bg-primary text-white transition hover:bg-primary-dark">

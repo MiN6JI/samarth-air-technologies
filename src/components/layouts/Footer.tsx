@@ -8,7 +8,13 @@ const Footer = () => {
       <Container className="grid gap-10 py-12 md:grid-cols-3">
         {/* Company */}
         <div>
-          <h2 className="mb-4 text-4xl font-extrabold text-white">LOGO</h2>
+          <Link to="/" className="inline-block py-4">
+            <img
+              src="/logo/Smarath-air-technologies-logo-1.png"
+              alt="samarth-air-technologies-logo"
+              className="h-22 w-auto object-contain brightness-0 invert"
+            />
+          </Link>
 
           <p className="leading-7">
             Delivering innovative technology solutions with quality and
@@ -57,7 +63,7 @@ const Footer = () => {
         <div>
           <h3 className="mb-4 text-lg font-semibold text-white">Contact</h3>
 
-          <p>Email: info@gmail.com</p>
+          <p>Email: samarthairtechnologies@gmail.com</p>
           <p>Phone: +91 73047 39002</p>
           <p>India</p>
         </div>

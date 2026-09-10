@@ -1,10 +1,11 @@
 import Container from "../../../components/UI/Container";
 
 const stats = [
-  { value: "100%", label: "Compliance Score" },
   { value: "6+", label: "Years of Experience" },
-  { value: "100", label: "Clients Served" },
-  { value: "100+", label: "Project Completed" },
+  { value: "250", label: "Clients Served" },
+  // { value: "150", label: "Active AMCs" },
+  { value: "120+", label: "Project Completed" },
+  { value: "100%", label: "Compliance Score" },
 ];
 
 export default function StatsBar() {
