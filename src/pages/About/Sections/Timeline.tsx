@@ -174,7 +174,7 @@ const milestones: Milestone[] = [
 const summaryStats = [
   {
     icon: HiOutlineCalendarDays,
-    value: "5+ Years",
+    value: "6+ Years",
     label: "Industry Experience",
   },
   {

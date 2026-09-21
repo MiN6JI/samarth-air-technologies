@@ -1,4 +1,5 @@
 import Container from "../../../components/UI/Container";
+import AnimateIn from "../../../components/UI/AnimateIn";
 
 interface HeroCTAProps {
   backgroundImage: string;
@@ -17,7 +18,7 @@ const Cta = ({
 }: HeroCTAProps) => {
   return (
     <section
-      className="relative bg-cover bg-center"
+      className="relative bg-cover bg-center overflow-hidden"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* dark overlay */}
@@ -35,20 +36,26 @@ const Cta = ({
 
       <Container>
         <div className="relative py-32 md:py-40 max-w-2xl">
-          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-            {heading}
-          </h1>
+          <AnimateIn variant="fade-up" delay={100}>
+            <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+              {heading}
+            </h1>
+          </AnimateIn>
 
-          <p className="mt-6 text-base md:text-lg text-gray-200 leading-relaxed">
-            {description}
-          </p>
+          <AnimateIn variant="fade-up" delay={250}>
+            <p className="mt-6 text-base md:text-lg text-gray-200 leading-relaxed">
+              {description}
+            </p>
+          </AnimateIn>
 
-          <button
-            onClick={onButtonClick}
-            className="mt-8 px-6 py-3 bg-primary text-white font-semibold hover:opacity-90 transition-opacity rounded-full"
-          >
-            {buttonText}
-          </button>
+          <AnimateIn variant="fade-up" delay={400}>
+            <button
+              onClick={onButtonClick}
+              className="mt-8 px-8 py-4 bg-primary text-white font-semibold transition-all duration-300 hover:bg-primary-dark hover:scale-105 hover:shadow-xl active:scale-95 rounded-full"
+            >
+              {buttonText}
+            </button>
+          </AnimateIn>
         </div>
       </Container>
     </section>
@@ -56,3 +63,4 @@ const Cta = ({
 };
 
 export default Cta;
+

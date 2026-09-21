@@ -90,16 +90,6 @@ const ContactForm = () => {
 
   return (
     <section className="relative overflow-hidden bg-primary-light/30 py-16 md:py-24">
-      {/* faint blueprint grid backdrop */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.35]"
-        style={{
-          backgroundImage:
-            "linear-gradient(#DDE3DA 1px, transparent 1px), linear-gradient(90deg, #DDE3DA 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
-        }}
-      />
-
       <Container>
         <div className="relative mx-auto max-w-5xl font-body">
           <div className="mb-12">

@@ -5,7 +5,7 @@ import Container from "../../components/UI/Container";
 const NotFound = () => {
   return (
     <Container className="flex min-h-[70vh] flex-col items-center justify-center text-center">
-      <p className="text-7xl font-extrabold text-blue-600">404</p>
+      <p className="text-7xl font-extrabold text-primary">404</p>
 
       <h1 className="mt-4 text-4xl font-bold text-gray-900">Page Not Found</h1>
 
@@ -14,7 +14,7 @@ const NotFound = () => {
       </p>
 
       <Link to="/" className="mt-8">
-        <button className="mt-8 px-6 py-3 bg-primary text-white font-semibold hover:opacity-90 transition-opacity">
+        <button className="rounded-full mt-8 px-6 py-3 bg-primary text-white font-semibold hover:opacity-90 transition-opacity">
           Back to Home
         </button>
       </Link>
