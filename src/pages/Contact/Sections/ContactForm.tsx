@@ -10,6 +10,7 @@ import Container from "../../../components/UI/Container";
 interface FormData {
   name: string;
   email: string;
+  company: string;
   phone: string;
   service: string;
   message: string;
@@ -18,6 +19,7 @@ interface FormData {
 const initialForm: FormData = {
   name: "",
   email: "",
+  company: "",
   phone: "",
   service: "",
   message: "",
@@ -95,7 +97,7 @@ const ContactForm = () => {
           <div className="mb-12">
             <div className="flex items-center gap-2 text-sm font-semibold tracking-[0.2em] text-slate-600">
               <span className="h-2 w-2 rounded-full bg-primary" />
-              WHAT WE DO
+              GET IN TOUCH
             </div>
             <h2 className="font-display mt-3 text-3xl font-bold leading-tight text-[#16211C] md:text-[2.5rem]">
               Have a project in mind or need
@@ -122,9 +124,9 @@ const ContactForm = () => {
                   }}
                 />
                 <div className="relative">
-                  <span className="text-[11px] tracking-[0.25em] text-white">
+                  {/* <span className="text-[11px] tracking-[0.25em] text-white">
                     NAMEPLATE
-                  </span>
+                  </span> */}
                   <h3 className="font-display mt-2 text-xl font-semibold">
                     Samarth Air Technologies
                   </h3>
@@ -224,8 +226,28 @@ const ContactForm = () => {
                 </div>
 
                 <div>
+                  <label htmlFor="company" className={fieldLabel}>
+                    {tagNum(3)} Company Name
+                  </label>
+                  <input
+                    id="company"
+                    name="company"
+                    type="text"
+                    value={formData.company}
+                    onChange={handleChange}
+                    placeholder="XYZ Pvt. Ltd."
+                    className={`${inputBase} ${errors.company ? "border-red-400" : "border-[#DDE3DA]"}`}
+                  />
+                  {errors.company && (
+                    <p className="mt-1 text-xs text-red-500">
+                      {errors.company}
+                    </p>
+                  )}
+                </div>
+
+                <div>
                   <label htmlFor="email" className={fieldLabel}>
-                    {tagNum(3)} Email Address
+                    {tagNum(4)} Email Address
                   </label>
                   <input
                     id="email"
@@ -243,7 +265,7 @@ const ContactForm = () => {
 
                 <div>
                   <label htmlFor="service" className={fieldLabel}>
-                    {tagNum(4)} Service Interested In
+                    {tagNum(5)} Service Interested In
                   </label>
                   <select
                     id="service"
@@ -267,7 +289,7 @@ const ContactForm = () => {
 
                 <div>
                   <label htmlFor="message" className={fieldLabel}>
-                    {tagNum(5)} Message
+                    {tagNum(6)} Message
                   </label>
                   <textarea
                     id="message"

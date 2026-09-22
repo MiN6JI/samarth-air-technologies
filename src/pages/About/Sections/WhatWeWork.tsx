@@ -42,7 +42,7 @@ export default function WhatWeDo() {
             {/* Eyebrow */}
             <div className="flex items-center justify-left gap-2 text-sm font-semibold tracking-[0.2em] text-slate-500">
               <span className="h-2 w-2 rounded-full bg-primary" />
-              What We Do
+              Solutions Designed for Better Living
             </div>
 
             {/* Heading */}

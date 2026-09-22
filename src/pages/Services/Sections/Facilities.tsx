@@ -33,8 +33,7 @@ const serviceCategories: ServiceCategory[] = [
     subtitle: "Comprehensive Climate & Cooling Solutions",
     tag: "Cooling & Ventilation",
     icon: FiWind,
-    image:
-      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop",
+    image: "../public/services/hvac-repair.webp",
     imageAlt: "Industrial HVAC Chiller and Cooling Plant Installation",
     items: [
       { label: "Complete HVAC Turnkey Contracting (High-Side & Low-Side)" },
@@ -42,11 +41,11 @@ const serviceCategories: ServiceCategory[] = [
       { label: "Chiller Plant Preventive & Breakdown Maintenance" },
       {
         label:
-          "All Types of Compressor Overhauling & Repair (Screw, Reciprocating, Scroll, Centrifugal)",
+          "All Types of Compressor Overhauling & Repair (Screw, Reciprocating, Scroll, Centrifugal), Industrial Water Pump Repair & Overhauling, and L.V. Industrial Motor Rewinding & Servicing.",
       },
       { label: "Descaling of Heat Exchangers" },
-      { label: "Industrial Water Pump Repair & Overhauling" },
-      { label: "L.V. Industrial Motor Rewinding & Servicing" },
+      // { label: "Industrial Water Pump Repair & Overhauling" },
+      // { label: "L.V. Industrial Motor Rewinding & Servicing" },
       { label: "Switchgear & Control Panel Maintenance" },
       { label: "VFD & Soft Starter Services" },
     ],
@@ -56,8 +55,7 @@ const serviceCategories: ServiceCategory[] = [
     subtitle: "End-to-End Electrical Contracting & Audits",
     tag: "Power & Distribution",
     icon: FiZap,
-    image:
-      "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=1200&auto=format&fit=crop",
+    image: "../public/services/electrical-right-position.webp",
     imageAlt: "Electrical Switchgear Panel and Contracting",
     items: [
       {
@@ -87,8 +85,7 @@ const serviceCategories: ServiceCategory[] = [
     subtitle: "Sustainable Power & Energy Management",
     tag: "Clean Energy & Savings",
     icon: FiSun,
-    image:
-      "https://images.unsplash.com/photo-1509391365360-2e959784a276?q=80&w=1200&auto=format&fit=crop",
+    image: "../public/services/solar-installation.webp",
     imageAlt: "Commercial Rooftop Solar Energy System",
     items: [
       { label: "Rooftop & Ground-Mounted Solar Systems" },
@@ -103,8 +100,7 @@ const serviceCategories: ServiceCategory[] = [
     subtitle: "Life-Safety & Statutory Compliance",
     tag: "Life Safety & Protection",
     icon: FiAlertTriangle,
-    image:
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1200&auto=format&fit=crop",
+    image: "../public/services/fire-spray.webp",
     imageAlt: "Fire Detection Alarm and Protection System",
     items: [
       { label: "Fire Alarm & Advanced Detection Systems" },
@@ -201,7 +197,7 @@ const ServiceCategorySection: React.FC<{
                   </div>
                   <div>
                     <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
-                      Turnkey Solutions
+                      Engineering Solutions
                     </p>
                     <p className="text-sm font-bold text-slate-900">
                       {category.items.length} Specialized Offerings

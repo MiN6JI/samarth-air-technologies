@@ -15,7 +15,7 @@ const Home = () => {
       <StatsBar />
       <Faq />
       <Cta
-        backgroundImage={"/services/Electrical-variant.webp"}
+        backgroundImage={"/services/electrical-variant.webp"}
         onButtonClick={() => console.log("chat clicked")}
       />
     </>

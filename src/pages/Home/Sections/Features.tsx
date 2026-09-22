@@ -42,7 +42,7 @@ export default function KeyAdvantages() {
         {/* Heading */}
         <AnimateIn variant="fade-up" delay={200}>
           <h2 className="mt-3 text-center text-4xl font-bold text-slate-900 sm:text-5xl">
-            Our Key Advantages
+            Our Expertise
           </h2>
         </AnimateIn>
 
