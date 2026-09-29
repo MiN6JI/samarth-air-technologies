@@ -6,6 +6,7 @@ import {
 } from "react-icons/hi";
 
 import Container from "../../../components/UI/Container";
+import AnimateIn from "../../../components/UI/AnimateIn";
 
 interface FormData {
   name: string;
@@ -72,8 +73,23 @@ const ContactForm = () => {
     e.preventDefault();
     if (!validate()) return;
 
-    // TODO: wire this up to your API / email service
-    console.log("Contact form submitted:", formData);
+    const selectedService =
+      serviceOptions.find((opt) => opt.value === formData.service)?.label ||
+      formData.service;
+
+    const whatsappMessage = `*New Contact Inquiry - Samarth Air Technologies*
+
+*Name:* ${formData.name}
+*Phone:* ${formData.phone}
+*Email:* ${formData.email}
+${formData.company.trim() ? `*Company:* ${formData.company}\n` : ""}*Service:* ${selectedService}
+*Message:* ${formData.message}`;
+
+    const whatsappUrl = `https://wa.me/917304739002?text=${encodeURIComponent(
+      whatsappMessage,
+    )}`;
+
+    window.open(whatsappUrl, "_blank");
 
     setSubmitted(true);
     setFormData(initialForm);
@@ -81,7 +97,7 @@ const ContactForm = () => {
   };
 
   const inputBase =
-    "w-full rounded-md border bg-white px-4 py-2.5 text-sm text-[#16211C] outline-none transition-colors placeholder:text-[#9AA69E] focus:border-[#0E3B2E] focus:ring-2 focus:ring-[#0E3B2E]/15";
+    "w-full rounded-md border bg-white px-4 py-2.5 text-sm text-[#16211C] outline-none transition-all duration-200 placeholder:text-[#9AA69E] focus:border-[#0E3B2E] focus:ring-2 focus:ring-[#0E3B2E]/15";
 
   const fieldLabel =
     "mb-1.5 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#5C6B62]";
@@ -92,235 +108,262 @@ const ContactForm = () => {
 
   return (
     <section className="relative overflow-hidden bg-primary-light/30 py-16 md:py-24">
+      {/* Background Decorative Glow Blobs */}
+      <div className="pointer-events-none absolute -top-40 -left-40 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 -right-40 h-96 w-96 rounded-full bg-primary/5 blur-3xl" />
+
       <Container>
         <div className="relative mx-auto max-w-5xl font-body">
           <div className="mb-12">
-            <div className="flex items-center gap-2 text-sm font-semibold tracking-[0.2em] text-slate-600">
-              <span className="h-2 w-2 rounded-full bg-primary" />
-              GET IN TOUCH
-            </div>
-            <h2 className="font-display mt-3 text-3xl font-bold leading-tight text-[#16211C] md:text-[2.5rem]">
-              Have a project in mind or need
-              <br className="hidden md:block" /> urgent support?
-            </h2>
-            <p className="mt-3 max-w-xl text-[#5C6B62]">
-              Fill out the request below — HVAC, electrical, solar, or fire
-              safety — and our engineering team will follow up with a
-              consultation and quote.
-            </p>
+            <AnimateIn variant="fade-up" delay={100}>
+              <div className="flex items-center gap-2 text-sm font-semibold tracking-[0.2em] text-slate-600">
+                <span className="h-2 w-2 rounded-full bg-primary animate-pulse-slow" />
+                GET IN TOUCH
+              </div>
+            </AnimateIn>
+            <AnimateIn variant="fade-up" delay={200}>
+              <h2 className="font-display mt-3 text-3xl font-bold leading-tight text-[#16211C] md:text-[2.5rem]">
+                Have a project in mind or need
+                <br className="hidden md:block" /> urgent support?
+              </h2>
+            </AnimateIn>
+            <AnimateIn variant="fade-up" delay={300}>
+              <p className="mt-3 max-w-xl text-[#5C6B62]">
+                Fill out the request below — HVAC, electrical, solar, or fire
+                safety — and our engineering team will follow up with a
+                consultation and quote.
+              </p>
+            </AnimateIn>
           </div>
 
           {/* Panel with corner-bracket "spec sheet" framing */}
-          <div className="relative rounded-xl bg-white p-[1px] shadow-[0_1px_2px_rgba(14,59,46,0.08)]">
+          <div className="relative rounded-xl bg-white p-[1px] shadow-xl ring-1 ring-slate-900/5">
             <div className="grid gap-0 md:grid-cols-5">
               {/* Contact / nameplate panel */}
-              <div className="rounded-xl relative flex flex-col justify-between bg-[#0E3B2E] p-8 text-white md:col-span-2">
-                <div
-                  className="pointer-events-none absolute inset-0 opacity-[0.06]"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)",
-                    backgroundSize: "24px 24px",
-                  }}
-                />
-                <div className="relative">
-                  {/* <span className="text-[11px] tracking-[0.25em] text-white">
-                    NAMEPLATE
-                  </span> */}
-                  <h3 className="font-display mt-2 text-xl font-semibold">
-                    Samarth Air Technologies
-                  </h3>
-                  <p className="mt-2 text-sm text-white/70">
-                    Fill out the form and our specialists will respond within 24
-                    hours.
-                  </p>
+              <AnimateIn
+                variant="fade-right"
+                delay={200}
+                duration={800}
+                className="md:col-span-2 h-full"
+              >
+                <div className="rounded-xl relative flex flex-col justify-between bg-[#0E3B2E] p-8 text-white h-full">
+                  <div
+                    className="pointer-events-none absolute inset-0 opacity-[0.06]"
+                    style={{
+                      backgroundImage:
+                        "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)",
+                      backgroundSize: "24px 24px",
+                    }}
+                  />
+                  <div className="relative">
+                    <h3 className="font-display mt-2 text-xl font-semibold">
+                      Samarth Air Technologies
+                    </h3>
+                    <p className="mt-2 text-sm text-white/70">
+                      Fill out the form and our specialists will respond within 24
+                      hours.
+                    </p>
 
-                  <div className="mt-8 flex flex-col gap-4 text-sm">
-                    <div className="flex items-center gap-3">
-                      <HiOutlinePhone size={18} className="text-white" />
-                      <span className="">+91 73047 39002</span>
+                    <div className="mt-8 flex flex-col gap-4 text-sm">
+                      <div className="group flex items-center gap-3 transition-transform duration-200 hover:translate-x-1">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-white transition-colors duration-200 group-hover:bg-white/20">
+                          <HiOutlinePhone size={18} className="text-white" />
+                        </div>
+                        <span className="font-medium">+91 73047 39002</span>
+                      </div>
+                      <div className="group flex items-center gap-3 transition-transform duration-200 hover:translate-x-1">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/10 text-white transition-colors duration-200 group-hover:bg-white/20">
+                          <HiOutlineMail size={18} className="text-white" />
+                        </div>
+                        <span className="font-medium">xyz@gmail.com</span>
+                      </div>
+                      <div className="group flex items-start gap-3 transition-transform duration-200 hover:translate-x-1">
+                        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/10 text-white transition-colors duration-200 group-hover:bg-white/20">
+                          <HiOutlineLocationMarker
+                            size={18}
+                            className="text-white"
+                          />
+                        </div>
+                        <span className="font-medium mt-1">Mumbai, Maharashtra, India</span>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <HiOutlineMail size={18} className="text-white" />
-                      <span className="">xyz@gmail.com</span>
+                  </div>
+
+                  {/* Site location — embedded map, styled like a spec-sheet panel */}
+                  <div className="relative mt-8">
+                    <div className="mb-2 flex items-center gap-2">
+                      <span className="text-[10px] tracking-[0.2em] text-white font-semibold">
+                        SITE LOCATION
+                      </span>
+                      <span className="h-px flex-1 bg-white/15" />
                     </div>
-                    <div className="flex items-start gap-3">
-                      <HiOutlineLocationMarker
-                        size={18}
-                        className="mt-0.5 text-white"
+                    <div className="overflow-hidden border border-white/15 rounded-lg transition-transform duration-300 hover:scale-[1.01]">
+                      <iframe
+                        title="Samarth Air Technologies location"
+                        src="https://www.google.com/maps?q=Mumbai,Maharashtra,India&output=embed"
+                        width="100%"
+                        height="180"
+                        style={{
+                          border: 0,
+                          filter: "grayscale(0.15) contrast(1.05)",
+                        }}
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
                       />
-                      <span>Mumbai, Maharashtra, India</span>
                     </div>
                   </div>
                 </div>
-
-                {/* Site location — embedded map, styled like a spec-sheet panel */}
-                <div className="relative mt-8">
-                  <div className="mb-2 flex items-center gap-2">
-                    <span className="text-[10px] tracking-[0.2em] text-white">
-                      SITE LOCATION
-                    </span>
-                    <span className="h-px flex-1 bg-white/15" />
-                  </div>
-                  <div className="overflow-hidden border border-white/15">
-                    <iframe
-                      title="Samarth Air Technologies location"
-                      src="https://www.google.com/maps?q=Mumbai,Maharashtra,India&output=embed"
-                      width="100%"
-                      height="180"
-                      style={{
-                        border: 0,
-                        filter: "grayscale(0.15) contrast(1.05)",
-                      }}
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                    />
-                  </div>
-                </div>
-              </div>
+              </AnimateIn>
 
               {/* Form */}
-              <form
-                onSubmit={handleSubmit}
-                className="flex flex-col gap-5 p-8 md:col-span-3 rounded-xl"
-                noValidate
+              <AnimateIn
+                variant="fade-left"
+                delay={300}
+                duration={800}
+                className="md:col-span-3"
               >
-                <div className="grid gap-5 sm:grid-cols-2">
-                  <div>
-                    <label htmlFor="name" className={fieldLabel}>
-                      {tagNum(1)} Full Name
-                    </label>
-                    <input
-                      id="name"
-                      name="name"
-                      type="text"
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="John Doe"
-                      className={`${inputBase} ${errors.name ? "border-red-400" : "border-[#DDE3DA]"}`}
-                    />
-                    {errors.name && (
-                      <p className="mt-1 text-xs text-red-500">{errors.name}</p>
-                    )}
+                <form
+                  onSubmit={handleSubmit}
+                  className="flex flex-col gap-5 p-8 rounded-xl bg-white"
+                  noValidate
+                >
+                  <div className="grid gap-5 sm:grid-cols-2">
+                    <div>
+                      <label htmlFor="name" className={fieldLabel}>
+                        {tagNum(1)} Full Name
+                      </label>
+                      <input
+                        id="name"
+                        name="name"
+                        type="text"
+                        value={formData.name}
+                        onChange={handleChange}
+                        placeholder="John Doe"
+                        className={`${inputBase} ${errors.name ? "border-red-400" : "border-[#DDE3DA]"}`}
+                      />
+                      {errors.name && (
+                        <p className="mt-1 text-xs text-red-500">{errors.name}</p>
+                      )}
+                    </div>
+
+                    <div>
+                      <label htmlFor="phone" className={fieldLabel}>
+                        {tagNum(2)} Phone Number
+                      </label>
+                      <input
+                        id="phone"
+                        name="phone"
+                        type="tel"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        placeholder="+91 98765 43210"
+                        className={`${inputBase} ${errors.phone ? "border-red-400" : "border-[#DDE3DA]"}`}
+                      />
+                      {errors.phone && (
+                        <p className="mt-1 text-xs text-red-500">
+                          {errors.phone}
+                        </p>
+                      )}
+                    </div>
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className={fieldLabel}>
-                      {tagNum(2)} Phone Number
+                    <label htmlFor="company" className={fieldLabel}>
+                      {tagNum(3)} Company Name
                     </label>
                     <input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      value={formData.phone}
+                      id="company"
+                      name="company"
+                      type="text"
+                      value={formData.company}
                       onChange={handleChange}
-                      placeholder="+91 98765 43210"
-                      className={`${inputBase} ${errors.phone ? "border-red-400" : "border-[#DDE3DA]"}`}
+                      placeholder="XYZ Pvt. Ltd."
+                      className={`${inputBase} ${errors.company ? "border-red-400" : "border-[#DDE3DA]"}`}
                     />
-                    {errors.phone && (
+                    {errors.company && (
                       <p className="mt-1 text-xs text-red-500">
-                        {errors.phone}
+                        {errors.company}
                       </p>
                     )}
                   </div>
-                </div>
 
-                <div>
-                  <label htmlFor="company" className={fieldLabel}>
-                    {tagNum(3)} Company Name
-                  </label>
-                  <input
-                    id="company"
-                    name="company"
-                    type="text"
-                    value={formData.company}
-                    onChange={handleChange}
-                    placeholder="XYZ Pvt. Ltd."
-                    className={`${inputBase} ${errors.company ? "border-red-400" : "border-[#DDE3DA]"}`}
-                  />
-                  {errors.company && (
-                    <p className="mt-1 text-xs text-red-500">
-                      {errors.company}
-                    </p>
-                  )}
-                </div>
+                  <div>
+                    <label htmlFor="email" className={fieldLabel}>
+                      {tagNum(4)} Email Address
+                    </label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="john@example.com"
+                      className={`${inputBase} ${errors.email ? "border-red-400" : "border-[#DDE3DA]"}`}
+                    />
+                    {errors.email && (
+                      <p className="mt-1 text-xs text-red-500">{errors.email}</p>
+                    )}
+                  </div>
 
-                <div>
-                  <label htmlFor="email" className={fieldLabel}>
-                    {tagNum(4)} Email Address
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="john@example.com"
-                    className={`${inputBase} ${errors.email ? "border-red-400" : "border-[#DDE3DA]"}`}
-                  />
-                  {errors.email && (
-                    <p className="mt-1 text-xs text-red-500">{errors.email}</p>
-                  )}
-                </div>
+                  <div>
+                    <label htmlFor="service" className={fieldLabel}>
+                      {tagNum(5)} Service Interested In
+                    </label>
+                    <select
+                      id="service"
+                      name="service"
+                      value={formData.service}
+                      onChange={handleChange}
+                      className={`${inputBase} ${errors.service ? "border-red-400" : "border-[#DDE3DA]"}`}
+                    >
+                      {serviceOptions.map((opt) => (
+                        <option key={opt.value} value={opt.value}>
+                          {opt.label}
+                        </option>
+                      ))}
+                    </select>
+                    {errors.service && (
+                      <p className="mt-1 text-xs text-red-500">
+                        {errors.service}
+                      </p>
+                    )}
+                  </div>
 
-                <div>
-                  <label htmlFor="service" className={fieldLabel}>
-                    {tagNum(5)} Service Interested In
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                    className={`${inputBase} ${errors.service ? "border-red-400" : "border-[#DDE3DA]"}`}
+                  <div>
+                    <label htmlFor="message" className={fieldLabel}>
+                      {tagNum(6)} Message
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows={4}
+                      value={formData.message}
+                      onChange={handleChange}
+                      placeholder="Tell us about your project..."
+                      className={`${inputBase} resize-none ${errors.message ? "border-red-400" : "border-[#DDE3DA]"}`}
+                    />
+                    {errors.message && (
+                      <p className="mt-1 text-xs text-red-500">
+                        {errors.message}
+                      </p>
+                    )}
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full bg-primary py-3.5 text-sm font-semibold uppercase tracking-[0.1em] text-white rounded-full transition-all duration-300 hover:bg-[#16211C] hover:shadow-lg hover:scale-[1.01] active:scale-[0.98]"
                   >
-                    {serviceOptions.map((opt) => (
-                      <option key={opt.value} value={opt.value}>
-                        {opt.label}
-                      </option>
-                    ))}
-                  </select>
-                  {errors.service && (
-                    <p className="mt-1 text-xs text-red-500">
-                      {errors.service}
-                    </p>
+                    Submit Request
+                  </button>
+
+                  {submitted && (
+                    <div className="flex items-center gap-2 text-xs font-semibold text-[#0E3B2E] bg-emerald-50 border border-emerald-200 rounded-lg p-3 transition-opacity duration-300">
+                      <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+                      RECEIVED — We'll get back to you shortly.
+                    </div>
                   )}
-                </div>
-
-                <div>
-                  <label htmlFor="message" className={fieldLabel}>
-                    {tagNum(6)} Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="Tell us about your project..."
-                    className={`${inputBase} resize-none ${errors.message ? "border-red-400" : "border-[#DDE3DA]"}`}
-                  />
-                  {errors.message && (
-                    <p className="mt-1 text-xs text-red-500">
-                      {errors.message}
-                    </p>
-                  )}
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-primary py-3 text-sm font-semibold uppercase tracking-[0.1em] text-white transition-colors hover:bg-[#16211C]"
-                >
-                  Submit Request
-                </button>
-
-                {submitted && (
-                  <p className="flex items-center gap-2  text-xs text-[#0E3B2E]">
-                    <span className="h-1.5 w-1.5 rounded-full bg-[#E8A33D]" />
-                    RECEIVED — we'll get back to you shortly.
-                  </p>
-                )}
-              </form>
+                </form>
+              </AnimateIn>
             </div>
           </div>
         </div>
@@ -330,3 +373,4 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+

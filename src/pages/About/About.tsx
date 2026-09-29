@@ -9,7 +9,7 @@ const About = () => {
   return (
     <>
       <PageHeader
-        backgroundImage="https://demo.awaikenthemes.com/coolify/demo2/wp-content/uploads/2025/07/page-header-bg.jpg"
+        backgroundImage="../public/services/guide.webp"
         pageName="About Us"
         breadcrumbs={[{ label: "About Us", href: "/about" }]}
       />

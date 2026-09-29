@@ -47,7 +47,7 @@ export default function KeyAdvantages() {
         </AnimateIn>
 
         {/* Feature grid */}
-        <div className="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {features.map(({ image, title, description }, index) => (
             <AnimateIn
               key={title}
