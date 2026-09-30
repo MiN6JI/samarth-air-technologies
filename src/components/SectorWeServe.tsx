@@ -81,7 +81,7 @@ export const sectorsData: SectorItem[] = [
 export interface SectorWeServeProps {
   className?: string;
   showHeading?: boolean;
-  bgVariant?: "primary" | "light" | "white" | "dark";
+  bgVariant?: "light" | "white" | "dark";
 }
 
 export function SectorWeServe({
