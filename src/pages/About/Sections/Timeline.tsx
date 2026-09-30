@@ -3,7 +3,6 @@ import Container from "../../../components/UI/Container";
 import {
   HiOutlineSparkles,
   HiOutlineBolt,
-  HiOutlineShieldCheck,
   HiOutlineCheck,
   HiOutlineArrowTrendingUp,
   HiOutlineCalendarDays,
@@ -326,7 +325,8 @@ export default function Timeline() {
 
           {/* Subtitle */}
           <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
-            From specialized component suppliers to complete multi-disciplinary infrastructure solution providers.
+            From specialized component suppliers to complete multi-disciplinary
+            infrastructure solution providers.
           </p>
 
           {/* Year Filter Tabs */}

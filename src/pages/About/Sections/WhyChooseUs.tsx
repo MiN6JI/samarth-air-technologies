@@ -81,41 +81,39 @@ export default function WhyChooseUs() {
 
         {/* Single Row Feature Layout */}
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-2">
-          {whyChooseUsData.map(
-            ({ number, title, description, icon: Icon }, index) => (
-              <AnimateIn
-                key={number}
-                variant="fade-up"
-                delay={150 + index * 70}
-                className="h-full"
-              >
-                <div className="group relative h-full flex flex-col justify-between rounded-2xl border border-white/20 bg-white/10 p-5 sm:p-6 text-white backdrop-blur-md transition-all duration-300 hover:bg-white hover:text-slate-900 hover:-translate-y-2 hover:shadow-2xl">
-                  <div>
-                    <div className="flex items-center justify-between">
-                      {/* <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/20 text-white transition-colors duration-300 group-hover:bg-primary group-hover:text-white shadow-sm">
+          {whyChooseUsData.map(({ number, title, description }, index) => (
+            <AnimateIn
+              key={number}
+              variant="fade-up"
+              delay={150 + index * 70}
+              className="h-full"
+            >
+              <div className="group relative h-full flex flex-col justify-between rounded-2xl border border-white/20 bg-white/10 p-5 sm:p-6 text-white backdrop-blur-md transition-all duration-300 hover:bg-white hover:text-slate-900 hover:-translate-y-2 hover:shadow-2xl">
+                <div>
+                  <div className="flex items-center justify-between">
+                    {/* <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/20 text-white transition-colors duration-300 group-hover:bg-primary group-hover:text-white shadow-sm">
                         <Icon className="h-6 w-6" />
                       </div> */}
-                      <span className="text-xl font-black tracking-tight text-white/40 group-hover:text-primary/40 transition-colors duration-300">
-                        {number}
-                      </span>
-                    </div>
-
-                    <h3 className="mt-5 text-base font-bold leading-snug group-hover:text-slate-900 transition-colors duration-300">
-                      {title}
-                    </h3>
-
-                    <p className="mt-2 text-xs sm:text-sm text-white/80 group-hover:text-slate-600 leading-relaxed transition-colors duration-300">
-                      {description}
-                    </p>
+                    <span className="text-xl font-black tracking-tight text-white/40 group-hover:text-primary/40 transition-colors duration-300">
+                      {number}
+                    </span>
                   </div>
 
-                  <div className="mt-5 pt-3 border-t border-white/10 group-hover:border-slate-200 transition-colors duration-300">
-                    <div className="h-1 w-8 rounded-full bg-white/30 group-hover:bg-primary transition-all duration-300 group-hover:w-full" />
-                  </div>
+                  <h3 className="mt-5 text-base font-bold leading-snug group-hover:text-slate-900 transition-colors duration-300">
+                    {title}
+                  </h3>
+
+                  <p className="mt-2 text-xs sm:text-sm text-white/80 group-hover:text-slate-600 leading-relaxed transition-colors duration-300">
+                    {description}
+                  </p>
                 </div>
-              </AnimateIn>
-            ),
-          )}
+
+                <div className="mt-5 pt-3 border-t border-white/10 group-hover:border-slate-200 transition-colors duration-300">
+                  <div className="h-1 w-8 rounded-full bg-white/30 group-hover:bg-primary transition-all duration-300 group-hover:w-full" />
+                </div>
+              </div>
+            </AnimateIn>
+          ))}
         </div>
       </Container>
     </section>
