@@ -14,10 +14,10 @@ const Home = () => {
       <Features />
       <About />
       <StatsBar />
-      <SectorWeServe/>
+      <SectorWeServe />
       <Faq />
       <Cta
-        backgroundImage={"/services/electrical-variant.webp"}
+        backgroundImage={"/services-imgs/electrical-variant.webp"}
         onButtonClick={() => console.log("chat clicked")}
       />
     </>

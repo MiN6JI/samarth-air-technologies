@@ -9,7 +9,7 @@ const About = () => {
   return (
     <>
       <PageHeader
-        backgroundImage="../public/services/guide.webp"
+        backgroundImage="/services-imgs/guide.webp"
         pageName="About Us"
         breadcrumbs={[{ label: "About Us", href: "/about" }]}
       />
@@ -18,9 +18,7 @@ const About = () => {
       <WhyChooseUs />
       <Timeline />
       <Cta
-        backgroundImage={
-          "https://demo.awaikenthemes.com/coolify/demo2/wp-content/uploads/2025/07/what-we-do-image.jpg"
-        }
+        backgroundImage={"/services-imgs/fire-spray.webp"}
         onButtonClick={() => console.log("chat clicked")}
       />
     </>

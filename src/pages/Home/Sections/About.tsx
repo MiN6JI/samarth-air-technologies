@@ -76,28 +76,28 @@ export default function About() {
 
             <div className="col-span-1 overflow-hidden rounded-2xl shadow-md transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
               <img
-                src="/services/hvac.webp"
+                src="/services-imgs/hvac.webp"
                 alt="HVAC Service"
                 className="h-80 w-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
             <div className="col-span-1 mt-10 overflow-hidden rounded-2xl shadow-md transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
               <img
-                src="/services/fire.webp"
+                src="/services-imgs/fire.webp"
                 alt="Fire Service"
                 className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
             <div className="h-65 col-span-1 overflow-hidden rounded-2xl shadow-md transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
               <img
-                src="/services/electrical.webp"
+                src="/services-imgs/electrical.webp"
                 alt="Electrical Service"
                 className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
             <div className="col-span-1 mt-4 overflow-hidden rounded-2xl shadow-md transition-all duration-500 hover:shadow-2xl hover:-translate-y-1">
               <img
-                src="/services/solar.webp"
+                src="/services-imgs/solar.webp"
                 alt="Solar Service"
                 className="h-72 w-full object-cover transition-transform duration-700 hover:scale-105"
               />

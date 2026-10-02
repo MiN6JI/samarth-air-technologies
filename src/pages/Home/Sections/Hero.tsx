@@ -8,7 +8,7 @@ export default function AcHero() {
     <section className="relative w-full min-h-[640px] overflow-hidden bg-zinc-900">
       {/* Background image */}
       <img
-        src="/services/hvac-variant.webp"
+        src="/services-imgs/hvac-variant.webp"
         alt="Technician servicing an air conditioning unit"
         className="absolute inset-0 h-full w-full object-cover animate-hero-zoom"
       />
